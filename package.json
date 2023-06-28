@@ -2,9 +2,9 @@
   "name": "study-nodejs",
   "version": "1.0.0",
   "description": "study nodejs",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start":"nodemon index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -14,7 +14,8 @@
   "author": "dargonj24",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
