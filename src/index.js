@@ -21,6 +21,7 @@ app.set("views", path.join(__dirname, "resources/views"));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
 app.get('/', (req, res) => { return res.render('home'); })
 
 app.listen(port, () => { console.log("app run " +port); })
