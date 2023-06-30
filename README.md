@@ -4,5 +4,5 @@ study nodjs base
 - nodemon
 - express
 - morgan
-## 2.FIX BUG
-1. static file
+## 2. FUNCTION
+- Format code : prettier ,lint -staged ,husky
