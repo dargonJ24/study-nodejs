@@ -1,12 +1,14 @@
 const Course =require("../models/Course")
 class SiteController {
-  async index(req, res) {
-    try {
-      const coursesxx = await Course.find({});
-      res.json(coursesxx);
-    } catch (err) {
-      res.status(400).json({ error: 'ERROR !!' });
-    }
-  }
+ index(req,res,next)
+ 
+ {
+  Course.find({})
+  .then(course=>res.render('home',{
+    course
+  }))
+  .catch(error=>next(error));
+
+ }
 }
   module.exports=new SiteController;
