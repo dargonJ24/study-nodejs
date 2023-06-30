@@ -6,3 +6,5 @@ study nodjs base
 - morgan
 ## 2. FUNCTION
 - Format code : prettier ,lint -staged ,husky
+### 3/NOTE
+- model  + "s" =colection
