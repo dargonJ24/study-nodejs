@@ -4,9 +4,12 @@ class SiteController {
  
  {
   Course.find({})
-  .then(course=>res.render('home',{
-    course
-  }))
+  .then(course=>{
+    course =course.map(course=>course.toObject)
+    res.render('home',{course})
+
+  })
+  
   .catch(error=>next(error));
 
  }
