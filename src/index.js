@@ -22,8 +22,11 @@ app.set("views", path.join(__dirname, "resources","views"));
 //set static file
 //app.use(express.static(path.join(__dirname),'public')) => Bug
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.urlencoded({ extended: true })) 
+// handle show data json 
+app.use(express.json()) 
 const route =require('./routes')
+//
 route(app) //init routes
 //app.get('/', (req, res) => { return res.render('home'); })
 
