@@ -10,5 +10,6 @@ study nodjs base
 - model  + "s" =colection
 ### 4/ISSUE
 - export data moongodb
+-  if document have struct different into object generrate errr ?
 ### 5/ SUMMARY
 - P1 : READ ONE COURSE : url:  slug , moongodb : findone
