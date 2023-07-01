@@ -1,19 +1,17 @@
-<div class="mt-4">
-  <div class ="row">
-    {{#each  Course}}
-     <div class="col-sm-6 col-lg-4">
-<div class="card" style="width: 18rem;">
-  <a href="/course/{{this.slug}}"> 
-  <img class="card-img-top" src="{{this.image}}" alt="Card image ">
-  </a>
- 
-  <div class="card-body">
-    <h5 class="card-title">{{this.name}}</h5>
-    <p class="card-text">{{this.description}}</p>
-    <a href="#" class="btn btn-primary">Mua khoa hoc</a>
+<div class="mt-4 d-flex flex-wrap">
+  {{#each  Course}}
+  <div class="col-sm-6 col-lg-4">
+    <div class="card" style="width: 18rem;">
+      <a href="/course/{{this.slug}}"> 
+        <img class="card-img-top" src="{{this.image}}" alt="Card image ">
+      </a>
+
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <p class="card-text">{{this.description}}</p>
+        <a href="#" class="btn btn-primary">Mua khoa hoc</a>
+      </div>
+    </div>
   </div>
-</div>
-    {{/each}}
-     </div>
-  </div>
+  {{/each}}
 </div>
