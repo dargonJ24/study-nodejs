@@ -1,0 +1,25 @@
+<div class="mt-4">
+    <h3>My Course</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Name Course</th>
+                <th scope="col" colspan="2">Decription</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            {{#each course }}
+            <tr>
+                <th scope="row">1</th>
+                <td>{{this.name}}</td>
+                <td>{{this.description}}</td>
+                <td>
+                    <a href="/course/{{this._id}}" class="btn btn-link">update</a>
+                    <a href="/course/{{this._id}}" class="btn btn-link">delete</a>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

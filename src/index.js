@@ -1,8 +1,10 @@
 
 const path = require('path'); 
+
 const express = require('express'); 
 const handlebars = require('express-handlebars').engine;
 const app = express(); 
+const methodOverride = require('method-override')
 const port = 3000; // HTTP log dùng để hiển thị log khi CT chạy app.use(morgan('combined'));
 // code for version new update 28/6/2023
 const db =require('./config/db')
@@ -23,8 +25,10 @@ app.set("views", path.join(__dirname, "resources","views"));
 //app.use(express.static(path.join(__dirname),'public')) => Bug
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true })) 
+
 // handle show data json 
 app.use(express.json()) 
+app.use(methodOverride('_method'))
 const route =require('./routes')
 //
 route(app) //init routes

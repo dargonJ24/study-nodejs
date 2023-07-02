@@ -27,5 +27,22 @@ class CourseController{
       )
       .catch(error => {})
         }
+
+      //GET EDIT
+      edit(req,res,next){
+        Course.findById(req.params.id)
+        .then(course =>res.render('course/edit',{
+          course : MongooseToObject(course)
+        }))
+  
+      }
+       // PUT course/:id
+    update(req,res,next){
+      Course.updateOne({_id:req.params.id},req.body)
+      .then(()=>res.redirect('/me/course'))
+      .catch(next)
+
+    }
+
 }
 module.exports =new CourseController;

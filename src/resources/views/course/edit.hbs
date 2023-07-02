@@ -1,0 +1,14 @@
+<h1>UPDATE INFOMATION COURSE</h1>
+<form method="POST" action="/course/{{course._id}}?_method=PUT">
+  <div class="form-group">
+    <label for="name">name</label>
+    <input type="text" class="form-control" value ={{course.name}} id="name"  name="name" aria-describedby="emailHelp" placeholder="Enter name">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" value ={{course.description}} id="description" name="description" aria-describedby="emailHelp" placeholder="description">
+   <label for="videoid">videoid</label>
+    <input type="text" class="form-control" value ={{course.videoid}} id="videoid"  name="videoid" aria-describedby="emailHelp" placeholder="Enter videoid">
+    
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">SAVE</button>
+</form>
