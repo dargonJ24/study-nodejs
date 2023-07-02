@@ -18,7 +18,9 @@ class CourseController{
     //[POST] /courses/store
     store(req,res,next)
     {
-      const course =new Course(req.body)
+      const formdata =req.body
+      formdata.image= `https://img.youtube.com/vi/${req.body.videoid}/maxresdefault.jpg"`
+      const course =new Course(formdata)
       course.save()
       .then(()=>res.redirect('/')
 
