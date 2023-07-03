@@ -13,4 +13,11 @@ study nodjs base
 -  if document have struct different into object generrate errr ?
 -  generrate slug have bug : same name => err
 ### 5/ SUMMARY
-- P1 : READ ONE COURSE : url:  slug , moongodb : findone
+- CRUD
+- fake method
+-  handlebar
+- nodemon
+- boostrap4
+- soft delete
+- mooongodb vs moongose
+

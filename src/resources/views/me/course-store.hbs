@@ -61,12 +61,13 @@
 });
 
  btnDeleteCourse.onclick =function(){
-  alert(courseId);
+  
   if (deleteForm) {
   deleteForm.action = '/course/' + courseId + '?_method=DELETE';
 } else {
   console.error('Delete form not found');
 }
+deleteForm.submit()
   
  }
  })
